@@ -86,13 +86,13 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route
-        path="/booksearch/login"
+        path="/BookSearch/login"
         element={
-          isAuthenticated ? <Navigate to="/booksearch" /> : <LoginPage />
+          isAuthenticated ? <Navigate to="/BookSearch/" /> : <LoginPage />
         }
       />
       <Route
-        path="/booksearch"
+        path="/BookSearch/"
         element={
           isAuthenticated ? (
             <HomePage
@@ -106,7 +106,7 @@ const AppRoutes = () => {
               query={query}
             />
           ) : (
-            <Navigate to="/booksearch/login" />
+            <Navigate to="/BookSearch/login" />
           )
         }
       />
