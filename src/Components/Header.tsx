@@ -1,29 +1,3 @@
-// import React from "react";
-// import { useAuth } from "../useAuth";
-
-// type HeaderProps = {
-//   averageDuration: number;
-// };
-
-// const Header: React.FC<HeaderProps> = ({ averageDuration }) => {
-//   const { isAuthenticated, username, logout } = useAuth();
-//   return (
-//     <header>
-//       {isAuthenticated && (
-//         <div>
-//           {averageDuration > 0 && (
-//             <p>Average search duration: {averageDuration.toFixed(2)} ms</p>
-//           )}
-//           <p>{`Hello, ${username}`}</p>
-//           <button onClick={logout}>Log out</button>
-//         </div>
-//       )}
-//     </header>
-//   );
-// };
-
-// export default Header;
-
 import React from "react";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { useAuth } from "../useAuth";

@@ -20,7 +20,7 @@ export const serverRespondList = {
       first_publish_year: 1925,
     },
     {
-      author_name: undefined, // Если автор неизвестен
+      author_name: undefined,
       title: "Mysterious Tales",
       edition_count: 3,
       first_publish_year: undefined,
