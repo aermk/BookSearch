@@ -208,6 +208,72 @@ export const serverRespondList = {
   ],
 };
 
+export const serverRespondListFirstPage = {
+  numFound: 34,
+  docs: [
+    {
+      author_name: ["George Orwell"],
+      title: "1984",
+      edition_count: 12,
+      first_publish_year: 1949,
+    },
+    {
+      author_name: ["J.K. Rowling"],
+      title: "Harry Potter and the Philosopher's Stone",
+      edition_count: 7,
+      first_publish_year: 1997,
+    },
+    {
+      author_name: ["F. Scott Fitzgerald"],
+      title: "The Great Gatsby",
+      edition_count: 5,
+      first_publish_year: 1925,
+    },
+    {
+      author_name: undefined,
+      title: "Mysterious Tales",
+      edition_count: 3,
+      first_publish_year: undefined,
+    },
+    {
+      author_name: ["J.R.R. Tolkien"],
+      title: "The Hobbit",
+      edition_count: 8,
+      first_publish_year: 1937,
+    },
+    {
+      author_name: ["Harper Lee"],
+      title: "To Kill a Mockingbird",
+      edition_count: 10,
+      first_publish_year: 1960,
+    },
+    {
+      author_name: ["Isaac Asimov"],
+      title: "Foundation",
+      edition_count: 6,
+      first_publish_year: 1951,
+    },
+    {
+      author_name: undefined,
+      title: "Ancient Mysteries",
+      edition_count: 2,
+      first_publish_year: undefined,
+    },
+    {
+      author_name: ["Leo Tolstoy"],
+      title: "War and Peace",
+      edition_count: 11,
+      first_publish_year: 1869,
+    },
+    {
+      author_name: ["Mark Twain"],
+      title: "Adventures of Huckleberry Finn",
+      edition_count: 4,
+      first_publish_year: 1884,
+    },
+  ],
+};
+
 export const filteredBooksList = [
   {
     author: "George Orwell",

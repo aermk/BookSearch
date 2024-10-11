@@ -5,6 +5,16 @@ export type FiltredBook = {
   firstPublishYear: string | number;
 };
 
+export type FiltredBookWithNumFound = {
+  numFound: number;
+  docs: FiltredBook[];
+};
+
+export type ApiBooksResponse = {
+  numFound: number;
+  docs: ApiBook[];
+};
+
 export type ApiBook = {
   author_name?: string[];
   title: string;

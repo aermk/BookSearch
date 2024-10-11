@@ -10,7 +10,8 @@ import { useAuth } from "./useAuth";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
 import { useEffect, useState } from "react";
-import { ApiBook, FiltredBook } from "./types";
+import { FiltredBook } from "./types";
+import { fetchList } from "./api";
 
 const AppRoutes = () => {
   const { isAuthenticated } = useAuth();
@@ -38,26 +39,14 @@ const AppRoutes = () => {
         const startTime = performance.now();
 
         try {
-          const response = await fetch(
-            `https://openlibrary.org/search.json?q=${query}&page=${currentPage}&limit=${resultsPerPage}`
+          const filteredBooks = await fetchList(
+            query,
+            currentPage,
+            resultsPerPage
           );
 
-          if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
-          }
-          const data = await response.json();
-
-          const filteredBooks: FiltredBook[] = data.docs.map(
-            (book: ApiBook) => ({
-              author: book.author_name?.[0] || "Unknown author",
-              title: book.title,
-              editionCount: book.edition_count,
-              firstPublishYear: book.first_publish_year || "N/A",
-            })
-          );
-
-          setBookListOnPage(filteredBooks);
-          setNumAllBooks(data.numFound);
+          setBookListOnPage(filteredBooks.docs);
+          setNumAllBooks(filteredBooks.numFound);
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
           if (

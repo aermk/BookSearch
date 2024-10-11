@@ -2,15 +2,15 @@ import { FC } from "react";
 // import Pagination from "@mui/material/Pagination";
 import { CircularProgress, Box, Typography, Paper } from "@mui/material";
 import { BookListProps } from "../types";
-// import Pagination from "rc-pagination";
-// import "rc-pagination/assets/index.css";
+import Pagination from "rc-pagination";
+import "rc-pagination/assets/index.css";
 
 const BookList: FC<BookListProps> = ({
   bookListOnPage,
   loading,
-  //   currentPage,
-  //   onPageChange,
-  //   numAllBooks,
+  currentPage,
+  onPageChange,
+  numAllBooks,
 }) => {
   if (loading) {
     return (
@@ -59,12 +59,12 @@ const BookList: FC<BookListProps> = ({
           <Typography>{book.firstPublishYear}</Typography>
         </Paper>
       ))}
-      {/* <Pagination
+      <Pagination
         pageSize={10}
         onChange={onPageChange}
         current={currentPage}
         total={numAllBooks}
-      /> */}
+      />
       {/* <Box display="flex" justifyContent="center" mt={4}>
         <Pagination
           count={Math.ceil(numAllBooks / 10)}
