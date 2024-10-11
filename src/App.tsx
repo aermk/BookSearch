@@ -106,7 +106,7 @@ const AppRoutes = () => {
               query={query}
             />
           ) : (
-            <Navigate to="/login" />
+            <Navigate to="/booksearch/login" />
           )
         }
       />
