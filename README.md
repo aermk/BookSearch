@@ -7,6 +7,8 @@ Search API.
 
 ## Demo link
 
+[aermk.github.io/BookSearch/](https://aermk.github.io/BookSearch/login)
+
 ### How it works
 
 - the search page is only available to authenticated users;
