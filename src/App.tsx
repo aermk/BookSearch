@@ -86,11 +86,13 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route
-        path="/login"
-        element={isAuthenticated ? <Navigate to="/" /> : <LoginPage />}
+        path="/booksearch/login"
+        element={
+          isAuthenticated ? <Navigate to="/booksearch" /> : <LoginPage />
+        }
       />
       <Route
-        path="/"
+        path="/booksearch"
         element={
           isAuthenticated ? (
             <HomePage
