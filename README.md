@@ -7,7 +7,7 @@ Search API.
 
 ## Demo link
 
-[aermk.github.io/BookSearch/](https://aermk.github.io/BookSearch/login)
+[aermk.github.io/BookSearch/](https://aermk.github.io/BookSearch/)
 
 ### How it works
 
